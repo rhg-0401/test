@@ -19,7 +19,7 @@ $(document).ready(function(){
 			$('.plus span').removeClass('active');
 			$('.modal_container').removeClass('active');
 			$('.quick').removeClass('quick--active');
-			window.location.hash  = ''
+			window.location.hash  = '#modal-close'
 		}
 	});
 
@@ -81,7 +81,7 @@ $(document).ready(function(){
 
 		var hash = location.hash.replace("#", "");
 
-		if(hash == '') {
+		if(hash == 'modal-close') {
 			$('body').removeClass('quick--open');
 			$('.quick').removeClass('active');
 			$('.plus span').removeClass('active');
