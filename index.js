@@ -1,9 +1,5 @@
 $(document).ready(function(){
 	$(window).on('hashchange', function () {
-
-		if($('.quick.active').length > 0) {
-			return;
-		}
 		hash_change();
 	}).trigger('hashchange');
 
@@ -95,10 +91,12 @@ $(document).ready(function(){
 			$('.quick').removeClass('quick--active');
 			window.location.hash  = '#modal-close';
 		} else if(hash == 'modal-open') {
-			var $modal_container = $('.modal_container');
-			$('body').toggleClass('quick--open');
-			$modal_container.toggleClass('active');
-			$('.quick').addClass('quick--active');	
+			if($('.quick.active').length == 0) {
+				var $modal_container = $('.modal_container');
+				$('body').toggleClass('quick--open');
+				$modal_container.toggleClass('active');
+				$('.quick').addClass('quick--active');	
+			}
 		}
 	}
 });
