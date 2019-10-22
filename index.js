@@ -99,8 +99,8 @@ $(document).ready(function(){
 			$('.quick span').removeClass('active');	
 		} else if(hash == '') {
 			var $modal_container = $('.modal_container');
-			$('body').addClass('quick--open');
-			$modal_container.addClass('active');
+			$('body').removeClass('quick--open');
+			$modal_container.removeClass('active');
 			$('.quick').addClass('quick--active');
 			$('.quick').removeClass('active');	
 			$('.quick span').removeClass('active');	
