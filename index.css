@@ -1,0 +1,290 @@
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+body, h1 {
+	margin: 0;
+}
+
+a { text-decoration: none; color: #000; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+header {
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	background-color: #273037;
+	position: relative;
+}
+
+header h1 {
+	font-size: 20px;
+}
+
+header h1 a {
+	color: #fff;
+}
+
+header span {
+	position: absolute;
+	right: 20px;
+	top: 0;
+	color: #fff;
+	cursor: pointer;
+}
+
+nav {
+	background-color: #f2f2f2;
+	overflow: hidden;
+	padding: 15px 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+nav .date_content {
+	float: left;
+	text-align: center;
+}
+
+nav .date_content .date {
+	display: block;
+	font-size: 20px;
+}
+
+nav .date_content .day {
+	display: block;
+	font-weight: bold;
+}
+
+nav .btn_content {
+	float: right;
+	margin-top: 10px
+}
+
+nav .btn_content button {
+	border: none;
+	padding: 10px;
+	border-radius: 25px;
+	background-color: inherit;
+	border: 1px solid #ddd;
+	font-weight: bold;
+	color: #495057;
+	cursor: pointer;
+}
+
+.list {
+	padding-bottom: 100px;
+}
+
+.list li {
+	overflow: hidden;
+	padding: 15px;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+
+.memo {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 83px;
+	line-height: 83px;
+	background-color: #eee;
+	padding: 0 5px;
+}
+
+.list li a {
+	display: block;
+}
+
+.list .img_content {
+	float: left;
+}
+
+.list .img_content span {
+	position: relative;
+	top: -5px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.list .img_content i {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 35px;
+	text-align: center;
+	border-radius: 50%;
+	border: 1px solid #ddd;
+}
+
+.list .status_content {
+	float: right;
+	overflow: hidden;
+	margin-right: 50px;
+	position: relative;
+	transition: 0.5s;
+}
+
+.list .status_btn {
+	transition: 0.5s;
+	position: relative;
+	left: 0;
+}
+
+.list .status_btn.active {
+	position: relative;
+	left: -300px;
+}
+
+.list .status_content button {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	border: 1px solid #ddd;
+	cursor: pointer;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.quick--open::after {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.6);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0; 
+	display: block;
+	content: '';
+}
+
+.blind {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	margin: -1px;
+}
+
+.quick {
+	position: fixed;
+	z-index: 9999;
+	bottom: 40px;
+	right: 40px;
+	transition: 0.5s;
+}
+
+.quick--active {
+	transform: translateY(200px);
+}
+
+.quick div {
+	position: relative;
+}
+
+.quick ul {
+    position: absolute;
+    top: -50px;
+}
+
+.quick li {
+	width: 46px;
+	height: 46px;
+	text-align: center;
+	line-height: 46px;
+	background-color: #fff;
+	border-radius: 50%;
+	border: 1px solid #495057;
+	box-sizing: border-box;
+	position: relative;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.quick li a {
+	display: block;
+}
+
+
+.quick.active li {
+	opacity: 1;
+}
+
+.quick li:nth-of-type(1) {
+	bottom: -50px;
+}
+
+.quick li:nth-of-type(2) {
+	bottom: 0;
+}
+
+.quick.active li:nth-of-type(1) {
+	bottom: 10px;
+}
+
+.quick.active li:nth-of-type(2) {
+	bottom: 115px;
+}
+
+.plus span {
+	display: block;
+	width: 46px;
+	height: 46px;
+	background-color: #339af0;
+	border-radius: 50%;
+	position: relative;
+	transition: 0.5s;
+	z-index: 9998;
+}
+
+.plus span:before {
+    content: "";
+    display: block;
+    width: 21px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+}
+
+.plus span:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 21px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.plus span.active {
+	transform: rotate(47deg);
+}
+
+.modal_container {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	background-color: rgba(255, 255, 255);
+	width: 500px;
+	transform: translate(-50%, -50%);
+}
+
+.modal_container.active {
+	display: block;
+	z-index: 9999;
+}
+
+@media screen and (max-width: 950px) {
+	.modal_container {
+		width: 95%;
+	}
+}
