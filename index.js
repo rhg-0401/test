@@ -92,9 +92,18 @@ $(document).ready(function(){
 			window.location.hash  = '#modal-close';
 		} else if(hash == 'modal-open') {
 			var $modal_container = $('.modal_container');
-			$('body').toggleClass('quick--open');
-			$modal_container.toggleClass('active');
-			$('.quick').addClass('quick--active');	
+			$('body').addClass('quick--open');
+			$modal_container.addClass('active');
+			$('.quick').addClass('quick--active');
+			$('.quick').removeClass('active');	
+			$('.quick span').removeClass('active');	
+		} else if(hash == '') {
+			var $modal_container = $('.modal_container');
+			$('body').addClass('quick--open');
+			$modal_container.addClass('active');
+			$('.quick').addClass('quick--active');
+			$('.quick').removeClass('active');	
+			$('.quick span').removeClass('active');	
 		}
 	}
 });
