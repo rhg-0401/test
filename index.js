@@ -1,5 +1,9 @@
 $(document).ready(function(){
 	$(window).on('hashchange', function () {
+
+		if($('.quick.active').length > 0) {
+			return;
+		}
 		hash_change();
 	}).trigger('hashchange');
 
@@ -80,6 +84,8 @@ $(document).ready(function(){
 		console.log('hello');
 
 		var hash = location.hash.replace("#", "");
+
+		console.log(hash); 
 
 		if(hash == 'modal-close') {
 			$('body').removeClass('quick--open');
