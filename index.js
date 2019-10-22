@@ -101,7 +101,7 @@ $(document).ready(function(){
 			var $modal_container = $('.modal_container');
 			$('body').removeClass('quick--open');
 			$modal_container.removeClass('active');
-			$('.quick').addClass('quick--active');
+			$('.quick').removeClass('quick--active');
 			$('.quick').removeClass('active');	
 			$('.quick span').removeClass('active');	
 		}
