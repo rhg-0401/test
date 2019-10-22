@@ -1,4 +1,9 @@
 $(document).ready(function(){
+	$(window).on('hashchange', function () {
+		hash_change();
+	}).trigger('hashchange');
+
+
 	var timer;
 
 	$('.plus span').click(function () {
@@ -14,6 +19,7 @@ $(document).ready(function(){
 			$('.plus span').removeClass('active');
 			$('.modal_container').removeClass('active');
 			$('.quick').removeClass('quick--active');
+			window.location.hash  = ''
 		}
 	});
 
@@ -62,10 +68,31 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.date').click(function() {
-		var $modal_container = $('.modal_container');
-		$('body').toggleClass('quick--open');
-		$modal_container.toggleClass('active');
-		$('.quick').addClass('quick--active');
-	})
+	// $('.date').click(function() {
+	// 	var $modal_container = $('.modal_container');
+	// 	$('body').toggleClass('quick--open');
+	// 	$modal_container.toggleClass('active');
+	// 	$('.quick').addClass('quick--active');
+	// });
+
+
+	function hash_change() {
+		console.log('hello');
+
+		var hash = location.hash.replace("#", "");
+
+		if(hash == '') {
+			$('body').removeClass('quick--open');
+			$('.quick').removeClass('active');
+			$('.plus span').removeClass('active');
+			$('.modal_container').removeClass('active');
+			$('.quick').removeClass('quick--active');
+			window.location.hash  = ''
+		} else if(hash == 'modal-open') {
+			var $modal_container = $('.modal_container');
+			$('body').toggleClass('quick--open');
+			$modal_container.toggleClass('active');
+			$('.quick').addClass('quick--active');	
+		}
+	}
 });
