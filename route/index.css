@@ -7,4 +7,12 @@ ul {
 	padding: 0;
 }
 
-a { text-decoration: none; color: inherit; }
+a { text-decoration: none; color: inherit; display: block; }
+
+a {
+	padding: 20px;
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+	background-color: #ccc;
+	color: #fff;
+}
