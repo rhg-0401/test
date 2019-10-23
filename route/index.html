@@ -10,12 +10,12 @@
 	<ul class="list-sub"></ul>
 	<script id="list-main-template" type="text/x-handlebars-template">
 		{{#each this}}
-			<li><a href="?lecture-category-id={{@index}}#sub">{{this}}</a></li>
+			<li><a href="#lecture-category-id={{@index}}#sub">{{this}}</a></li>
 		{{/each}}
 	</script>
 	<script id="list-sub-template" type="text/x-handlebars-template">
 		{{#each this}}
-			<li style="color: red"><a href="?lecture-item={{@index}}#checked">{{this}}</a></li>
+			<li style="color: red"><a href="#lecture-item={{@index}}#checked">{{this}}</a></li>
 		{{/each}}
 	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
