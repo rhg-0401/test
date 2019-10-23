@@ -1,0 +1,75 @@
+body {
+	background-color: #f7f7f7;
+}
+
+body, h1 {
+	margin: 0;
+}
+
+header {
+	margin: 40px 0;
+}
+
+header h1 {
+	background: url(main_type_logintoaca.png) no-repeat;
+	width: 247px;
+	height: 52px;
+	margin: 0 auto;
+}
+
+header h1 a {
+	display: block;
+	height: 100%;
+}
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+}
+
+section {
+	margin: 0 10px;
+}
+
+form fieldset {
+	border: none;
+	padding: 0;
+}
+
+form .input_row {
+    height: 29px;
+    margin: 0 0 8px;
+    padding: 5px 11px;
+    border: solid 1px #dadada;
+    background: #fff;
+}
+
+form .input_row input {
+	font-size: 14px;
+    height: 20px;
+    line-height: 22px;
+    padding: 4px 0 6px;	
+	width: 100%;
+	border: none;
+}
+
+form input[type=submit] {
+	width: 100%;
+	border: none;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 15px 0;
+	color: #fff;
+	background-color: #4dabf7;
+	cursor: pointer;
+}
+
+form input[type=submit]:hover, 
+form input[type=submit]:focus {
+	opacity: 0.7;
+}
+

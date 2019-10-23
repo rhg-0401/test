@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>라우터 연습</title>
+	<link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<body>
+	<ul class="list-main"></ul>
+	<ul class="list-sub"></ul>
+	<script id="list-main-template" type="text/x-handlebars-template">
+		{{#each this}}
+			<li><a href="/?lecture-category-id={{@index}}#sub">{{this}}</a></li>
+		{{/each}}
+	</script>
+	<script id="list-sub-template" type="text/x-handlebars-template">
+		{{#each this}}
+			<li style="color: red"><a href="/?lecture-item={{@index}}#checked">{{this}}</a></li>
+		{{/each}}
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="./js/handlebars.min.js"></script>
+	<script src="./js/index.js"></script>
+</body>
+</html>
